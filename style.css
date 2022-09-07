@@ -1,0 +1,238 @@
+* {
+	box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  font-size: 100%;
+  font-family: sans-serif;
+}
+
+section {
+	height: 100vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+    background-position: center center;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+    align-items: center;
+	height: 18%;
+	box-shadow: 0 5px 15px rgba(0,0,0,.2);
+    width: 1340px;
+    background-color: rgba(0, 0, 0, 0.836);	
+}
+
+.logo img {
+   margin-left: 2.3em;
+   max-width: 100%;
+   height: auto !important;
+}
+
+nav {
+   align-self: center;
+   margin: 0 0.8em 0 0;
+}
+
+ul {
+	display: flex;
+    flex-flow: nowrap;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	transition: .5s;
+    list-style-type: none;
+}
+
+ul li a {
+	padding: 10px 20px;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #ffffff;
+	font-weight: bold;
+    transition: .5s;
+}
+
+ul li a:hover {
+	background: #ffffff;
+	color: rgb(0, 0, 0);
+    transition: .5s
+}
+.foto {
+    position: relative;
+    left: 50px;
+    top: 20px;
+}
+.foto-2 {
+    height: 530px;
+    width: 1340px;
+}
+.body {
+    background-color: rgb(238, 222, 222);
+}
+   
+.slider {
+    position: relative;
+    left: -120px;
+    top: -85px;
+    width: 1400px;
+    height: 450px;
+    margin: 100px;
+    box-shadow: 0 0 50px 70px #ffffff;
+}
+   
+.slider input[name="switch"] {
+    display: none;
+}
+   
+.switch {
+    position: absolute;
+    left: 0;
+    bottom: -70px;
+    text-align: center;
+    width: 100%;
+}
+   
+.switch label {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+    margin: 0 4px;
+    background-color: #ffffff;
+}	
+ 
+   
+#btn1:checked~.switch label[for="btn1"] {
+    background-color: rgba(255, 255, 255, 0.973);
+}
+
+#btn2:checked~.switch label[for="btn2"] {
+    background-color: white;
+}
+
+#btn3:checked~.switch label[for="btn3"] {
+    background-color: white;
+}
+
+.slider-inner {
+    overflow: hidden;
+}
+
+.slides {
+    width: 300%;
+    animation:animate 19s alternate infinite;
+}
+
+.slides img {
+    width: 1360px;
+    height: 600px;
+    float: left;
+}
+
+#btn1:checked~slider-inner slides {
+    transform: translate(-680px);
+}
+
+#btn2:checked~.slider-inner .slides {
+    transform: translate(-1360px);
+}
+
+#btn3:checked~.slider-inner .slides {
+    transform: translate(-2720px);
+}
+@keyframes animate{
+    0%{
+        
+    }
+    50%{
+        tansform: translateX(-680px);
+    }
+    50%{
+        transform: translateX(-1360px);
+    }
+    50%{
+        transform: translateX(-2720px);
+    }
+}
+.fotka-1 {
+    border-radius: 20px;
+    position: relative;
+    left: 200px;
+    height: 350px;
+    top: 200px;
+}
+.fotka-2 {
+    border-radius: 20px;
+    position: relative;
+    left: 500px;
+    height: 350px;
+    top: 200px;
+}
+.yozi {
+    text-align: center;
+    position: relative;
+    top: 50px;
+    font-size: 50px;
+}
+.fotka-3 {
+    border-radius: 20px;
+    position: relative;
+    left: -500px;
+    height: 350px;
+    top: 800px;
+}
+.fotka-5 {
+    border-radius: 20px;
+    position: relative;
+    top: 450px;
+    left: 850px;
+    height: 350px;
+    width: 350px;
+}
+.fotka-1:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+.fotka-2:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+.fotka-3:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+.fotka-5:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+.contass {
+    border: 1px solid rgba(0, 0, 0, 0.836);
+    height: 250px;
+    background-color: rgba(0, 0, 0, 0.836);
+    position: relative;
+    top: 600px;
+}
+.kop {
+    text-align: center;
+    position: relative;
+    top: 50px;
+    color: #ffffff;
+} 
